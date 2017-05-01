@@ -1,0 +1,25 @@
+<div class="auth-page" ng-controller="LoginCtrl">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3 col-xs-12">
+        <h1 class="text-xs-center">Sign In</h1>
+        <p class="text-xs-center">
+          <a href="#!/signup">Don't have an account?</a>
+        </p>
+        <form>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" ng-model="user.email" type="text" placeholder="Email">
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" ng-model="user.password" type="password" placeholder="Password">
+          </fieldset>
+          <button class="btn btn-lg btn-primary pull-xs-right" ng-click="login(user)">
+            Sign in
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

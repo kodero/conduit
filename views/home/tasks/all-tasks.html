@@ -1,0 +1,27 @@
+<div ng-controller="AllTaskCtrl as vm">
+    <div class="row border-bottom">
+		<div class="col-md-6">
+		    <h5 class="custom-page-header">{{vm.title}}</h5>
+		</div>
+		
+	</div>
+    
+    <div custom-scroll removable-area="108" class="row">
+		<table class="table table-responsive table-condensed table-stripped">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Deadline</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr ng-repeat="task in vm.tasks">
+					<td>{{task.title}}</td>
+					<td>{{task.deadline}}</td>
+				</tr>
+			</tbody>
+			
+		</table>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="home-page" ng-controller="ArticleListCtrl">
+
+  <div class="banner">
+    <div class="container">
+      <h1 class="logo-font">conduit</h1>
+      <p>A place to share your knowledge.</p>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-9">
+        <div class="feed-toggle">
+          <ul class="nav nav-pills outline-active">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Global Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!/feed">My Feed</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="post-preview" ng-repeat="article in articles">
+          <div class="post-meta">
+            <a href="#!/profile/{{article.author.username}}"><img ng-src="{{article.author.image}}" /></a>
+            <div class="info">
+              <a href="#!/profile/{{article.author.username}}" class="author">{{article.author.username}}</a>
+              <span class="date">{{article.createdAt}}</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm pull-xs-right">
+              <i class="ion-heart"></i> {{article.favoritesCount}}
+            </button>
+          </div>
+          <a href="#!/view-article/{{article.slug}}" class="preview-link">
+            <h1>{{article.title}}</h1>
+            <p>{{article.body}}</p>
+            <span>Read more...</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="sidebar">
+          <p>Popular Tags</p>
+
+          <div class="tag-list">
+            <a ng-repeat="tag in tags" ng-href="#!/?tag={{tag}}" class="label nav-pill label-default"><span class="badge" style="color: #5CB85C">{{tag}}</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

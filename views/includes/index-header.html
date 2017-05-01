@@ -1,0 +1,9 @@
+<div class="header" ng-controller="IndexCtrl">
+    <ul class="nav nav-pills pull-right">
+        <li ng-class="(currentMenu=='about') ? 'active' : ''" ng-click="setCurrentMenu('about')"><a href="#"><i class="fa fa-file-text"></i> About</a></li>
+        <li ng-class="(currentMenu=='contact') ? 'active' : ''" ng-click="setCurrentMenu('contact')"><a href="#/about"><i class="fa fa-envelope"></i> Contact </a></li>
+        <li ng-class="(currentMenu=='help') ? 'active' : ''" ng-click="setCurrentMenu('help')"><a href="#/help"><i class="fa fa-question"></i> Help </a></li>
+        <li ng-class="(currentMenu=='login') ? 'active' : ''" ng-click="setCurrentMenu('login')"><a href="#/"><i class="fa fa-bullhorn"></i> Login </a></li>
+    </ul>
+    <h3 class="logo-bg">&nbsp;</h3>
+</div>

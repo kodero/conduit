@@ -1,0 +1,120 @@
+<!-- sidebar -->
+<div id="sidebar-nav" ng-controller="MenuCtrl">
+    <ul id="dashboard-menu">
+        <li ng-class="(currentMenu==1) ? 'active' : ''" ng-click="setCurrentMenu(1)">
+            <div class="pointer" ng-show="currentMenu==1">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a href="./#/dashboard">
+                <i class="fa fa-home fa-fw"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <!-- 
+        <li ng-class="(currentMenu==0) ? 'active' : ''" ng-click="setCurrentMenu(0)">
+            <a class="dropdown-toggle" href="#">
+                <div class="pointer" ng-show="currentMenu==0">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <i class="icon-edit"></i>
+                <span>Recipes</span>
+                <i class="fa fa-angle-down" ng-hide="currentMenu==0"></i>
+            </a>
+            <ul class="submenu" ng-class="(currentMenu==0) ? 'active' : ''">
+                <li><a href="./#/recipes">List</a></li>
+                <li><a href="./#/recipes/new">New Recipe</a></li>
+            </ul>
+        </li>
+         -->
+        <li ng-class="(currentMenu==2) ? 'active' : ''" ng-click="setCurrentMenu(2)">
+            <a class="dropdown-toggle fake-a" ng-href="">
+                <div class="pointer" ng-show="currentMenu==2">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <i class="fa fa-folder-open fa-fw"></i>
+                <span>Product Catalog</span>
+                <i class="fa fa-angle-down" ng-hide="currentMenu==2"></i>
+            </a>
+            <ul class="submenu" ng-show="currentMenu==2">
+                <li ng-class="(currentSubMenu=='products') ? 'active' : ''"><a href="./#/products"
+                                                                               ng-click="setCurrentSubMenu('products')">Product
+                    list</a></li>
+                <!-- <li><a href="./#/productCategories">Categories</a></li>
+                <li><a href="./#/productCategories">Features</a></li> -->
+                <li><a href="./#/unitsofmeasure">Units of Measure</a></li>
+                <li><a href="./#/dimensions">Dimensions</a></li>
+            </ul>
+        </li>
+        <li ng-class="(currentMenu==3) ? 'active' : ''" ng-click="setCurrentMenu(3)">
+            <a class="dropdown-toggle fake-a" ng-href="">
+                <div class="pointer" ng-show="currentMenu==3">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <i class="fa fa-briefcase fa-fw"></i>
+                <span>Purchases</span>
+                <i class="fa fa-angle-down" ng-hide="currentMenu==3"></i>
+            </a>
+            <ul class="submenu" ng-show="currentMenu==3">
+                <li><a href="./#/distributors">Distributors</a></li>
+                <li><a href="./#/purchases">Purchase Orders</a></li>
+                <li><a href="./#/payments">Payments</a></li>
+                <li><a href="./#/purchase-returns">Return Outwards</a></li>
+                <li><a href="./#/purchaseStatements">Statements</a></li>
+            </ul>
+        </li>
+
+        <li ng-class="(currentMenu==4) ? 'active' : ''" ng-click="setCurrentMenu(4)">
+            <a class="dropdown-toggle fake-a" ng-href="">
+                <div class="pointer" ng-show="currentMenu==4">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <i class="fa fa-money fa-fw"></i>
+                <span>Sales</span>
+                <i class="fa fa-angle-down" ng-hide="currentMenu==4"></i>
+            </a>
+            <ul class="submenu" ng-show="currentMenu==4">
+                <li><a href="./#/customers">Customers</a></li>
+                <li><a href="./#/invoices">Sales Invoices</a></li>
+                <li><a href="./#/receipts">Receipts</a></li>
+                <li><a href="./#/sale-returns">Return Inwards</a></li>
+                <li><a href="./#/saleStatements">Statements</a></li>
+            </ul>
+        </li>
+        <li ng-class="(currentMenu==5) ? 'active' : ''" ng-click="setCurrentMenu(5)">
+            <div class="pointer" ng-show="currentMenu==5">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a href="./#/cashTills">
+                <i class="fa fa-bar-chart-o fa-fw"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+        <li ng-class="(currentMenu==6) ? 'active' : ''" ng-click="setCurrentMenu(6)">
+            <div class="pointer" ng-show="currentMenu==6">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a href="./#/cashTills">
+                <i class="fa fa-tasks fa-fw"></i>
+                <span>Cash Tills</span>
+            </a>
+        </li>
+        <li ng-class="(currentMenu==7) ? 'active' : ''" ng-click="setCurrentMenu(7)">
+            <div class="pointer" ng-show="currentMenu==7">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a href="./#/preferences">
+                <i class="fa fa-gears fa-fw"></i>
+                <span>Preferences</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- end sidebar -->

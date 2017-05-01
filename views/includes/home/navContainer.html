@@ -1,0 +1,8 @@
+<div ng-controller="MenuCtrl">
+    <div data-ng-include data-src="'./views/includes/home/nav.html'" ng-if="nav === 'mainNav'"></div>
+    <div data-ng-include data-src="'./views/includes/home/setupNav.html'" ng-if="nav === 'setupNav'"></div>
+    <div data-ng-include data-src="'./views/includes/home/membershipNav.html'" ng-if="nav === 'memberhipNav'"></div>
+    <div data-ng-include data-src="'./views/includes/home/pensionsNav.html'" ng-if="nav === 'pensionsNav'"></div>
+    <div data-ng-include data-src="'./views/includes/home/accountsNav.html'" ng-if="nav === 'accountsNav'"></div>
+    <div data-ng-include data-src="'./views/includes/home/preferenceNav.html'" ng-if="nav === 'preferenceNav'"></div>
+</div>

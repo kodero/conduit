@@ -1,0 +1,98 @@
+<div class="post-page" ng-controller="ArticleViewCtrl">
+
+  <div class="banner">
+    <div class="container">
+
+      <h1>{{article.title}}</h1>
+
+      <div class="post-meta">
+        <a href="#!/profile/{{article.author.username}}"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+        <div class="info">
+          <a href="#!/profile/{{article.author.username}}" class="author">{{article.author.username}}</a>
+          <span class="date">{{article.createdAt}}</span>
+        </div>
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-plus-round"></i>
+          &nbsp;
+          Follow {{article.author.username}} <span class="counter">(10)</span>
+        </button>
+        &nbsp;&nbsp;
+        <button class="btn btn-sm btn-outline-primary">
+          <i class="ion-heart"></i>
+          &nbsp;
+          Favorite Post <span class="counter">({{article.favouritesCount}})</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container page">
+
+    <div class="row post-content">
+      <div class="col-md-12">
+        <p>{{article.body}}</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="post-actions">
+      <div class="post-meta">
+        <a href="#!/profile/{{article.author.username}}"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+        <div class="info">
+          <a href="#!/profile/{{article.author.username}}" class="author">{{article.author.username}}</a>
+          <span class="date">{{article.createdAt}}</span>
+        </div>
+
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-plus-round"></i>
+          &nbsp;
+          Follow {{article.author.username}} <span class="counter">(10)</span>
+        </button>
+        &nbsp;
+        <button class="btn btn-sm btn-outline-primary">
+          <i class="ion-heart"></i>
+          &nbsp;
+          Favorite Post <span class="counter">(29)</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="card" ng-repeat="comment in comments">
+          <div class="card-block">
+            <p class="card-text">{{comment.body}}</p>
+          </div>
+          <div class="card-footer">
+            <a href="#!/profile/{{comment.author.username}}" class="comment-author">
+              <img src="" class="comment-author-img" />
+            </a>
+            &nbsp;
+            <a href="#!/profile/{{comment.author.username}}" class="comment-author">{{comment.author.username}}</a>
+            <span class="date-posted">{{comment.createdAt}}</span>
+          </div>
+        </div>
+
+        <form class="card comment-form">
+          <div class="card-block">
+            <textarea class="form-control" ng-model="comment.body" placeholder="Write a comment..." rows="3"></textarea>
+          </div>
+          <div class="card-footer">
+            <img src="{{article.author.image}}" class="comment-author-img" />
+            <button class="btn btn-sm btn-primary" ng-click="addComment(article, comment)">
+             Post Comment
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
